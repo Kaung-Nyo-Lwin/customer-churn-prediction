@@ -1,0 +1,4 @@
+,Model,Revenue_Loss(FN)
+0,XGBoost(2 Class),77152.2
+1,XGBoost(4 Class),45572.1
+2,HGBoost(4 Class),49647.549999999996
