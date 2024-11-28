@@ -199,9 +199,9 @@ def predict_churn(n_clicks, *inputs):
         input_data = pd.DataFrame([inputs], columns=feature_names)
         
         prediction = model.predict(input_data)[0]
-        result = "Yes" if prediction == 1 else "No"
+        # result = "Yes" if prediction == 1 else "No"
         
-        return f"Customer Churn Prediction: {result}"
+        return f"Customer Churn Prediction: {prediction}"
     
     return "Fill in the details and click 'Predict Churn'"
 
