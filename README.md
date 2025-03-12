@@ -101,10 +101,8 @@ Distribution of customers across the four classes (High/Low Value × Churn/No Ch
 
 ### Charge Analysis
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="./images/box_charges.png" width="400" length="300"/>
-  <img src="./images/box_total_charge.png" width="400" length="300"/>
-</div>
+<img src="./images/box_total_charge.png" width="400" length="300"/>
+
 
 Box plots showing the distribution of monthly and total charges
 
