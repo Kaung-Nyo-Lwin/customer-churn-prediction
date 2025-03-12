@@ -91,11 +91,40 @@ A machine learning-based web application that predicts customer churn in the tel
 3. Click "Predict Churn"
 4. View the prediction results and risk assessment
 
+## Data Analysis
+
+### Customer Distribution
+
+<img src="./images/customer_churn_4class.png" width="600" length="400"/>
+
+Distribution of customers across the four classes (High/Low Value × Churn/No Churn)
+
+### Charge Analysis
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="./images/box_charges.png" width="400" length="300"/>
+  <img src="./images/box_total_charge.png" width="400" length="300"/>
+</div>
+
+Box plots showing the distribution of monthly and total charges
+
+### Correlation Analysis
+
+<img src="./images/heat_map_corr.png" width="800" length="600"/>
+
+Heatmap showing correlations between different features
+
+### Feature Importance
+
+<img src="./images/heat_map_pps.png" width="800" length="600"/>
+
+Predictive Power Score (PPS) heatmap showing feature importance
+
 ## Model Development
 
 ### Pipeline Architecture
 
-<img src="./figures/pipeline.png" width="600" length="400"/>
+<img src="./images/pipeline.png" width="600" length="400"/>
 
 The pipeline consists of:
 - Numerical features: SimpleImputer (mean) → StandardScaler
