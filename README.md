@@ -95,7 +95,7 @@ A machine learning-based web application that predicts customer churn in the tel
 
 ### Pipeline Architecture
 
-<img src="../figures/pipeline.png" width="600" length="400"/>
+<img src="./figures/pipeline.png" width="600" length="400"/>
 
 The pipeline consists of:
 - Numerical features: SimpleImputer (mean) → StandardScaler
