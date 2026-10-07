@@ -1,0 +1,48 @@
+"""Illustrative profiles for the demo; these are not real customer records."""
+
+BASE = {
+    "gender": "Female",
+    "SeniorCitizen": 0,
+    "Partner": "No",
+    "Dependents": "No",
+    "PhoneService": "Yes",
+    "MultipleLines": "No",
+    "InternetService": "Fiber optic",
+    "OnlineSecurity": "No",
+    "OnlineBackup": "No",
+    "DeviceProtection": "No",
+    "TechSupport": "No",
+    "StreamingTV": "Yes",
+    "StreamingMovies": "Yes",
+    "Contract": "Month-to-month",
+    "PaperlessBilling": "Yes",
+    "PaymentMethod": "Electronic check",
+    "tenure": 8,
+    "MonthlyCharges": 94.50,
+    "TotalCharges": 756.00,
+}
+PROFILES = {
+    "flexible": BASE,
+    "established": {
+        **BASE,
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "tenure": 60,
+        "Contract": "Two year",
+        "PaymentMethod": "Bank transfer (automatic)",
+        "OnlineSecurity": "Yes",
+        "TechSupport": "Yes",
+        "OnlineBackup": "Yes",
+        "MonthlyCharges": 104.50,
+        "TotalCharges": 6270.00,
+    },
+    "new": {
+        **BASE,
+        "InternetService": "DSL",
+        "tenure": 1,
+        "MonthlyCharges": 49.90,
+        "TotalCharges": 49.90,
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+    },
+}

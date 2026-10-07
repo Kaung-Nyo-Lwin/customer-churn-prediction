@@ -1,0 +1,9 @@
+# Tested runtime for Python 3.10–3.12. Train and serve with the same versions.
+dash==3.2.0
+plotly==6.3.0
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib==1.5.2
+gunicorn==23.0.0

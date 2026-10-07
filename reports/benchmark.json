@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "file": "WA_Fn-UseC_-Telco-Customer-Churn.csv",
+    "sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+    "rows": 7043,
+    "features": 19,
+    "churn_count": 1869,
+    "churn_rate": 0.2653698707936959,
+    "missing_total_charges": 11
+  },
+  "split": {
+    "seed": 42,
+    "train_rows": 5634,
+    "test_rows": 1409,
+    "test_churn_count": 374,
+    "test_fraction": 0.2,
+    "cross_validation_folds": 5,
+    "train_ids_sha256": "9437744432ce21769b1271953f8e1b15fce68335b845546d6cc872363cd01848",
+    "test_ids_sha256": "9b72f959b0debeaedec02b1ea6f75465de6b23b352d67f14fe2f15c784267864"
+  },
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.2"
+  },
+  "demo_model": "Value-aware gradient boosting",
+  "value_threshold": 1398.125,
+  "threshold_policy": "Maximize F2 over 0.10\u20130.80 on five-fold OOF training scores",
+  "models": {
+    "Dummy (prior)": {
+      "threshold": 0.26,
+      "accuracy": 0.2654364797728886,
+      "roc_auc": 0.5,
+      "average_precision": 0.2654364797728886,
+      "precision": 0.2654364797728886,
+      "recall": 1.0,
+      "f1": 0.4195176668536175,
+      "f2": 0.6437177280550774,
+      "brier_score": 0.1949799619120813,
+      "flagged_customers": 1409,
+      "false_negatives": 0,
+      "missed_churn_historical_charges": 0.0,
+      "missed_charge_share": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          1035
+        ],
+        [
+          0,
+          374
+        ]
+      ],
+      "oof_average_precision": 0.2653155404866952
+    },
+    "Logistic regression": {
+      "threshold": 0.14,
+      "accuracy": 0.6635911994322214,
+      "roc_auc": 0.8418713994161565,
+      "average_precision": 0.6338135969389643,
+      "precision": 0.43670886075949367,
+      "recall": 0.9224598930481284,
+      "f1": 0.5927835051546392,
+      "f2": 0.7545931758530183,
+      "brier_score": 0.13808320715322406,
+      "flagged_customers": 790,
+      "false_negatives": 29,
+      "missed_churn_historical_charges": 108416.3,
+      "missed_charge_share": 0.20695346919452992,
+      "confusion_matrix": [
+        [
+          590,
+          445
+        ],
+        [
+          29,
+          345
+        ]
+      ],
+      "oof_average_precision": 0.6584080902913271
+    },
+    "Binary gradient boosting": {
+      "threshold": 0.15000000000000002,
+      "accuracy": 0.6607523066004258,
+      "roc_auc": 0.8435260533726008,
+      "average_precision": 0.6608171693937911,
+      "precision": 0.4329896907216495,
+      "recall": 0.8983957219251337,
+      "f1": 0.5843478260869566,
+      "f2": 0.7394366197183099,
+      "brier_score": 0.13669159344843373,
+      "flagged_customers": 776,
+      "false_negatives": 38,
+      "missed_churn_historical_charges": 112710.55,
+      "missed_charge_share": 0.21515066772545757,
+      "confusion_matrix": [
+        [
+          595,
+          440
+        ],
+        [
+          38,
+          336
+        ]
+      ],
+      "oof_average_precision": 0.6616040087339945
+    },
+    "Value-aware gradient boosting": {
+      "threshold": 0.14,
+      "accuracy": 0.6586231369765791,
+      "roc_auc": 0.8420199436823479,
+      "average_precision": 0.65239894177233,
+      "precision": 0.4307891332470893,
+      "recall": 0.8903743315508021,
+      "f1": 0.5806451612903226,
+      "f2": 0.7338034376377258,
+      "brier_score": 0.13678066054454047,
+      "flagged_customers": 773,
+      "false_negatives": 41,
+      "missed_churn_historical_charges": 108706.55,
+      "missed_charge_share": 0.20750752097856712,
+      "confusion_matrix": [
+        [
+          595,
+          440
+        ],
+        [
+          41,
+          333
+        ]
+      ],
+      "oof_average_precision": 0.6608219861289706
+    }
+  },
+  "four_class": {
+    "labels": [
+      "High_Churn",
+      "High_NoChurn",
+      "Low_Churn",
+      "Low_NoChurn"
+    ],
+    "accuracy": 0.801277501774308,
+    "confusion_matrix": [
+      [
+        25,
+        105,
+        0,
+        0
+      ],
+      [
+        16,
+        555,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        165,
+        79
+      ],
+      [
+        0,
+        0,
+        79,
+        384
+      ]
+    ]
+  }
+}
